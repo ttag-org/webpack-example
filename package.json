@@ -1,29 +1,28 @@
 {
-  "name": "webpack-runtime-example",
+  "name": "webpack-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "update": "ttag update i18n/uk.po ./src && npm run po2json",
-    "po2json": "ttag po2json i18n/uk.po --format=compact > i18n/uk.po.json",
-    "build-dev": "ASSET_PATH=./dist/ webpack"
+    "update": "ttag update i18n/uk.po ./src",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ttag-org/webpack-runtime-example.git"
+    "url": "git+https://github.com/ttag-org/webpack-example.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ttag-org/webpack-runtime-example/issues"
+    "url": "https://github.com/ttag-org/webpack-example/issues"
   },
-  "homepage": "https://github.com/ttag-org/webpack-runtime-example#readme",
+  "homepage": "https://github.com/ttag-org/webpack-example#readme",
   "devDependencies": {
     "@babel/core": "^7.4.5",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.4.5",
     "babel-loader": "^8.0.6",
     "ttag-cli": "^1.7.17",
+    "ttag-webpack-plugin": "0.0.3",
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.4"
   },

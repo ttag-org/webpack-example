@@ -7,6 +7,6 @@ msgstr ""
 "mime-version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/index.js:21
+#: src/index.js:3
 msgid "Hello with ttag"
 msgstr "Привіт з ttag"

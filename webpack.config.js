@@ -1,6 +1,5 @@
-const path = require("path");
-const webpack = require("webpack");
-
+const path = require('path');
+const TtagWebpackPlugin = require('ttag-webpack-plugin');
 module.exports = {
   mode: "development",
   entry: {
@@ -13,18 +12,15 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            plugins: ["@babel/plugin-syntax-dynamic-import"]
-          }
-        }
+        use: { loader: "babel-loader" }
       }
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.ASSET_PATH': JSON.stringify(process.env.ASSET_PATH)
+    new TtagWebpackPlugin({
+      translations: {
+        uk: path.resolve(__dirname, './i18n/uk.po')
+      }
     })
   ]
 };
