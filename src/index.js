@@ -1,3 +1,3 @@
 import { t } from 'ttag';
 
-document.write(t`Hello with ttag`);
+document.getElementById('content').innerHTML = t`Hello with ttag`

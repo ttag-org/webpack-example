@@ -1,3 +1,5 @@
+const path = require('path');
+const TtagWebpackPlugin = require('ttag-webpack-plugin');
 module.exports = {
   mode: "development",
   entry: {
@@ -13,5 +15,12 @@ module.exports = {
         use: { loader: "babel-loader" }
       }
     ]
-  }
+  },
+  plugins: [
+    new TtagWebpackPlugin({
+      translations: {
+        uk: path.resolve(__dirname, './i18n/uk.po')
+      }
+    })
+  ]
 };
